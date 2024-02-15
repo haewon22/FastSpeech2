@@ -1,5 +1,5 @@
-### Annotation 순서
-- audio → preprocessor-preprocessor.py → dataset.py → transformer → model → train.py → evaluate.py → synthesize.py 
+> ### Annotation 순서
+> - audio → preprocessor-preprocessor.py → dataset.py → transformer → model → train.py → evaluate.py → synthesize.py 
 
 # FastSpeech 2 - PyTorch Implementation
 
