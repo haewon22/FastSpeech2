@@ -1,6 +1,6 @@
 # FastSpeech 2 - PyTorch Implementation
 
-### annotation 순서
+### Annotation 순서
 - audio → preprocessor-preprocessor.py → dataset.py → transformer → model → train.py → evaluate.py → synthesize.py  
 
 
