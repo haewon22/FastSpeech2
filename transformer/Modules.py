@@ -8,8 +8,10 @@ class ScaledDotProductAttention(nn.Module):
 
     def __init__(self, temperature):
         super().__init__()
-        # 내적 결과를 스케일링 하는 데 사용함. 값이 클 수록 softmax 결과가 평탄함. 
-        # 각 key의 영향력을 조절해서 q와 관련성이 높은 key를 강조함
+        # 내적 결과를 스케일링 하는 데 사용함.
+        # scale 하는 이유
+        # 내적 결과에서 큰 값들 사이에서 softmax는 특정 값만 과도하게 살아남고 나머지 값들은 죽여버리는 과한 정제가 이뤄지고, 작은 값들은 작은 gradient로 작용하고 학습도 느려짐
+        # softmax가 비슷한 값들 사이에서 이루어지도록 원래 값을 scaled-down 해주면 softmax 이후에도 살아남은 gradient가 많아짐
         self.temperature = temperature
         self.softmax = nn.Softmax(dim=2)
 
